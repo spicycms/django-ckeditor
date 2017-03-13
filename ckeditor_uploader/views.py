@@ -5,7 +5,7 @@ from datetime import datetime
 
 from django.conf import settings
 from django.core.files.storage import default_storage
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import RequestContext
 from django.views import generic
@@ -15,6 +15,8 @@ from ckeditor_uploader import image_processing
 from ckeditor_uploader import utils
 from ckeditor_uploader.forms import SearchForm
 from django.utils.html import escape
+
+from spicy.core import JsonResponse
 
 
 def get_upload_filename(upload_name, user):
